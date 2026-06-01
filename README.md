@@ -2,7 +2,7 @@ Download ubuntu-26.04-live-server-amd64.iso in the same directory as this lab.
 
 iso_url can be a remote location, but my internet connection is not that stable. If it's a remote url and checksum matches, Packer will download it only once and reuse it.
 
-Build with packer build .
+Build with `packer build .`
 
 Provisioned user is ubuntu/ubuntu, suit to taste.
 
