@@ -10,14 +10,14 @@ Try artifacts with:
 
 Legacy BIOS: 
 
-qemu-system-x86_64 -enable-kvm -m 1G -cpu host -smp 1 -drive file=ubuntu-kvm-packer,format=qcow2
+`qemu-system-x86_64 -enable-kvm -m 1G -cpu host -smp 1 -drive file=ubuntu-kvm-packer,format=qcow2`
 
 UEFI:
-
+```
 cp /usr/share/OVMF/OVMF_VARS_4M.fd <your working dir>
 
 qemu-system-x86_64 -enable-kvm -m 1G -cpu host -smp 1 -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE_4M.fd -drive if=pflash,format=raw,file=./OVMF_VARS_4M.fd -drive file=ubuntu-kvm-packer,format=qcow2
-
+```
 TODO:
 
 - Use keys instead of user/pass.
