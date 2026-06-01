@@ -1,0 +1,32 @@
+#cloud-config
+autoinstall:
+  version: 1
+
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+
+  identity:
+    hostname: ubuntu-packer
+    username: ubuntu
+    password: "$6$w.ufriFHhDkdjrv4$QF.mM.DWZUto1oM809aPB1S.7o2SvaXgPPtKpgsOPbeo0ZP8oyCNM4Cr5vk8MfBdncLgcHODALph4uwAbl40m1"
+
+  ssh:
+    install-server: true
+    allow-pw: true
+
+  storage:
+    layout:
+      name: direct
+
+  user-data:
+    disable_root: false
+    users:
+      - name: ubuntu
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        lock_passwd: false
+        passwd: "$6$w.ufriFHhDkdjrv4$QF.mM.DWZUto1oM809aPB1S.7o2SvaXgPPtKpgsOPbeo0ZP8oyCNM4Cr5vk8MfBdncLgcHODALph4uwAbl40m1"
+        
+        
+        
+
